@@ -2,32 +2,111 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+:root{
+  --marginauto:0 auto;
+  --bgblack:#1b1b1b;
+  --bgqhite:#ffffff;
+  --padding05:0.5rem;
+  --padding1:1rem;
+  --padding2:2rem;
+  --padding3:3rem;
+  --gap1:1rem;
+  --gap2:2rem;
+  --gap3:3rem;
 }
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+*{
+  margin: 0px;
+  padding: 0px;
+  box-sizing: content-box;
 }
-
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+body{
+  width: min(93%,1800px);
+  margin: var(--marginauto);
 }
-
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
+nav{
+  background-color:var(--bgblack);
+  color:var(--bgqhite);
+  padding: var(--padding1);
+}
+h1{
+  font-weight: bold;
+  font-size: 24px;
+}
+h2{
+  font-weight: 500;
+  font-size: 22px;
+}
+h3{
+  font-weight: 500;
+  font-size: 16px;
+}
+h4{
+  font-weight: 400;
+  font-size: 16px;
+}
+section ul li{
+  list-style-type: disc;
+  list-style-position: inside;
+}
+a:hover{
+  color: blue;
+}
+.navbar{
+  display: flex;
+  justify-content: space-between;
+}
+.caveman{
+  font-size: 18px;
+  font-weight: bold;
+}
+button{
+  background-color: #1b1b1b;
+  color: #ffffff;
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+.references a{
+  color: blue;
+}
+.videos,.contactinfo{
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(min(200px,50%),1fr));
+  gap: var(--gap2);
+}
+.videos{
+  margin-top: 30px;
+  width: 100%;
+}
+.videos > *{
+  width: 100%;
+}
+.icons {
+  font-size: 30px;
+}
+.contactinfo div,main,section{
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap1);
+}
+.contactinfo div{ 
+  align-items: center;
+  background-color: rgb(237, 237, 237);
+  padding: var(--padding1);
+}
+main{
+  gap: var(--gap2) !important;
+  margin-top: 10px;
+}
+main a{
+  color: blue;
+  text-decoration: underline;
+}
+.bgblue{
+  background-color: rgba(0, 166, 255, 0.838);
+  padding:var(--padding1);
+  width:100%;
+}
+strong{
+  font-weight: 600;
+  font-size: 14px;
 }
