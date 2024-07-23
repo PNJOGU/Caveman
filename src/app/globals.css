@@ -22,11 +22,15 @@
 body{
   width: min(93%,1800px);
   margin: var(--marginauto);
+  justify-content: space-between;
+  display: flex;
+  flex-direction: column;
 }
 nav{
   background-color:var(--bgblack);
   color:var(--bgqhite);
   padding: var(--padding1);
+  gap: var(--gap2);
 }
 h1{
   font-weight: bold;
@@ -44,26 +48,54 @@ h4{
   font-weight: 400;
   font-size: 16px;
 }
-section ul li{
+section ul li:not(footer li){
   list-style-type: disc;
   list-style-position: inside;
 }
+
 a:hover{
   color: blue;
 }
-.navbar{
+nav{
   display: flex;
-  justify-content: space-between;
+}
+.navbar{
+  gap: var(--gap2);
+  flex: 1;
 }
 .caveman{
   font-size: 18px;
   font-weight: bold;
 }
+strong{
+  font-weight: 600;
+  font-size: 18px;
+}
 button{
-  background-color: #1b1b1b;
-  color: #ffffff;
+  background-color: var(--bgblack);
+ color: var(--bgqhite);
   padding: 5px 10px;
   border-radius: 5px;
+}
+nav div{
+  display: flex;
+  flex-basis: 100px;
+  align-items: center;
+  justify-content: center;
+}
+main{
+  gap: var(--gap2) !important;
+  margin-top: 10px;
+  min-height:100vh;
+}
+main a{
+  color: blue;
+  text-decoration: underline;
+}
+
+p{
+  font-size: 18px;
+  line-height: 25px;
 }
 .references a{
   color: blue;
@@ -93,20 +125,68 @@ button{
   background-color: rgb(237, 237, 237);
   padding: var(--padding1);
 }
-main{
-  gap: var(--gap2) !important;
-  margin-top: 10px;
-}
-main a{
-  color: blue;
-  text-decoration: underline;
-}
 .bgblue{
   background-color: rgba(0, 166, 255, 0.838);
   padding:var(--padding1);
-  width:100%;
+  max-width:100%;
 }
-strong{
-  font-weight: 600;
-  font-size: 14px;
+
+footer{
+  background-color: #1b1b1b;
+  padding: var(--padding1);
+  color: #ffffff;
+  gap: var(--gap2);
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(min(90%,300px),1fr));
+  margin-top: 30px;
+}
+footer h3{
+  font-weight: bold;
+}
+footer p, footer li{
+  font-weight: 200;
+  color: var(--lightgray);
+}
+.menuicon{
+  font-size: 25px;
+}
+@media screen and (max-width:990px) {
+  .navbar{
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    background-color: var(--bgblack);
+    right: 0px;
+    top:59px;
+    width: 100%;
+    min-height: 100vh;
+  }
+  .navbar li{
+    border: 1px solid white;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+  }
+  .navbar li a {
+    width: 100%;
+    text-align: center;
+  }
+ 
+  nav{
+    justify-content: space-between;
+    position: relative;
+  }
+}
+
+@media screen and (min-width:991px) {
+  .navbaricons{
+    display: none;
+  }
+  .navbar{
+    display: flex !important;
+    margin-left: 120px;
+    justify-content: space-between;
+  }
 }
