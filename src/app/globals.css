@@ -69,7 +69,7 @@ nav{
 }
 strong{
   font-weight: 600;
-  font-size: 18px;
+  font-size: 16px;
 }
 button{
   background-color: var(--bgblack);
@@ -93,9 +93,25 @@ main a{
   text-decoration: underline;
 }
 p{
-  font-size: 18px;
+  font-size: 16px;
   line-height: 25px;
   font-weight: 200;
+}
+footer{
+  background-color: #1b1b1b;
+  padding: var(--padding1);
+  color: #ffffff;
+  gap: var(--gap2);
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(min(90%,300px),1fr));
+  margin-top: 30px;
+}
+footer h3{
+  font-weight: bold;
+}
+footer p, footer li{
+  font-weight: 200;
+  color: var(--lightgray);
 }
 .references a{
   color: blue;
@@ -131,22 +147,6 @@ p{
   max-width:100%;
 }
 
-footer{
-  background-color: #1b1b1b;
-  padding: var(--padding1);
-  color: #ffffff;
-  gap: var(--gap2);
-  display: grid;
-  grid-template-columns: repeat(auto-fit,minmax(min(90%,300px),1fr));
-  margin-top: 30px;
-}
-footer h3{
-  font-weight: bold;
-}
-footer p, footer li{
-  font-weight: 200;
-  color: var(--lightgray);
-}
 .menuicon{
   font-size: 25px;
 }
