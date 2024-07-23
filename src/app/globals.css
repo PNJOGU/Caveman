@@ -92,10 +92,10 @@ main a{
   color: blue;
   text-decoration: underline;
 }
-
 p{
   font-size: 18px;
   line-height: 25px;
+  font-weight: 200;
 }
 .references a{
   color: blue;
