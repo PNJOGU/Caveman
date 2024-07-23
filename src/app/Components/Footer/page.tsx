@@ -10,7 +10,7 @@ function Footer() {
     <footer>
       <section>
         <h3>Contact me</h3>
-        <p>Address:Kamukunji Business Center,Nairobi</p>
+        <p>Address:Westlands,Nairobi</p>
         <p>Email:<Link href={'mailto:paulnjogu2006@gmail.com'}>paulnjogu2006@gmail.com</Link></p>
         <p>Tel:<Link href={'tel:0724767731'}>0724767731</Link></p>
         <p>Tel2:<Link href={'tel:0785667326'}>0785667326</Link></p>
@@ -22,12 +22,11 @@ function Footer() {
       <section >
         <h3>Quick links</h3>
         <ul className='flex flex-col gap-1'>
-          <li><Link href={'/'}>Home</Link></li>
-          <li><Link href={'/About'}>Products</Link></li>
-          <li><Link href={'/Projects'}>Pricing</Link></li>
-          <li><Link href={'/Contact'}>Testimonials</Link></li>
-          <li><Link href={'/Contact'}>Contact us</Link></li>
-          <li><Link href={'/Contact'}>FAQ</Link></li>
+          <li><Link href={'/'}>Course</Link></li>
+          <li><Link href={'/Psychology'}>Psychology</Link></li>
+          <li><Link href={'/Youtube'}>Youtube</Link></li>
+          <li><Link href={'/Livetrading'}>Live trading</Link></li>
+          <li><Link href={'/Contact'}>Contact</Link></li>
         </ul>
       </section>
       <section>
@@ -41,7 +40,7 @@ function Footer() {
         </ul>
       </section>
       <section >
-        <p className='flex items-center gap-1'><FaCopyright /> 2024 Decor - All rights reserved</p>
+        <p className='flex items-center gap-1'><FaCopyright /> 2024 Caveman - All rights reserved</p>
       </section>
     </footer>
   )
